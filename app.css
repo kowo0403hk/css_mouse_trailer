@@ -1,0 +1,25 @@
+body {
+  background-color: rgb(25, 25, 25);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+#trailer {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 20px;
+  position: fixed; /*position relative to the viewport, it always stays at the same place when you scroll*/
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  pointer-events: none; /*so that any click on the trailer will pass through and reach the content underneath*/
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+/*whenever our mouse is in the document, the trailer would appear*/
+body:hover > #trailer {
+  opacity: 1;
+}
