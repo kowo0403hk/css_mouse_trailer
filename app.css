@@ -1,8 +1,11 @@
 body {
   background-color: rgb(25, 25, 25);
-  width: 100vw;
   height: 100vh;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(10px, 4vw, 100px)
 }
 
 #trailer {
@@ -22,4 +25,19 @@ body {
 /*whenever our mouse is in the document, the trailer would appear*/
 body:hover > #trailer {
   opacity: 1;
+}
+
+.interactable {
+  aspect-ratio: 1 / 1.5;
+  width: clamp(120px, 40vmin, 600px);
+  background-position: center 50%;
+  background-size: 100%;
+  opacity: 0.4;
+
+  transition: background-size 400ms ease, opacity 400ms ease;
+}
+
+.interactable:hover {
+  background-size: 105%;
+  opacity: 0.8;
 }
