@@ -5,5 +5,8 @@ window.onmousemove = (e) => {
   const x = e.clientX - trailer.offsetWidth / 2,
     y = e.clientY - trailer.offsetHeight / 2;
 
-  trailer.style.transform = `translate(${x}px, ${y}px`;
+  const keyframes = { transform: `translate(${x}px, ${y}px` };
+
+  // create an animated trailer so that it will lag behind by 800ms
+  trailer.animate(keyframes, { duration: 800, fill: "forwards" });
 };
