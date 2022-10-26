@@ -20,6 +20,8 @@ body {
   pointer-events: none; /*so that any click on the trailer will pass through and reach the content underneath*/
   opacity: 0;
   transition: opacity 500ms ease;
+  display: grid;
+  place-items: center;
 }
 
 /*whenever our mouse is in the document, the trailer would appear*/
@@ -40,4 +42,15 @@ body:hover > #trailer {
 .interactable:hover {
   background-size: 105%;
   opacity: 0.8;
+}
+
+#trailer:not([data-type=""]) > #trailer__icon {
+  opacity: 1;
+}
+
+#trailer__icon {
+  font-size: 6px;
+  line-height: 4px;
+  opacity: 0;
+  transition: opacity 400ms ease;
 }

@@ -14,10 +14,22 @@ const animateTrailer = (e, interacting) => {
   trailer.animate(keyframes, { duration: 800, fill: "forwards" });
 };
 
+const getTrailerIcon = (type) => {
+  return type === "video" ? "fa-solid fa-video" : "fa-solid fa-link";
+};
+
 window.onmousemove = (e) => {
   const interactable = e.target.closest(".interactable"); //the closest function searches back up the dom tree to find the reference to an element with a given class
 
   const interacting = interactable !== null; //boolean to indicate if the trailer is inside of the interactable element
 
+  const icon = document.getElementById("trailer__icon");
+
   animateTrailer(e, interacting);
+
+  trailer.dataset.type = interacting ? interactable.dataset.type : "";
+
+  if (interacting) {
+    icon.className = getTrailerIcon(interactable.dataset.type);
+  }
 };
