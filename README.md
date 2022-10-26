@@ -7,14 +7,12 @@ All credits to HyperTutorial (https://www.youtube.com/watch?v=CZIJKkwc8l8).
 ## Screenshots
 
 Home
-![Home]()
+![Home](https://github.com/kowo0403hk/css_mouse_trailer/blob/master/docs/Home%20-%20with%20trailer.png?raw=true)
 
 Trailer icon 1:
-![icon 1]()
+![icon 1](https://github.com/kowo0403hk/css_mouse_trailer/blob/master/docs/Trailer%20icon%201.png?raw=true)
 
 Trailer icon 2:
-![icon 2]()
+![icon 2](https://github.com/kowo0403hk/css_mouse_trailer/blob/master/docs/Trailer%20icon%202.png?raw=true)
 
 ## Video
-
-![how it looks like]()
